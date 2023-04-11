@@ -21,7 +21,7 @@ def price():
         
         if price is not None:
             data_price = price.text.strip()
-            print(f"Prisen er {data_price}")
+            print(f"Prisen er {data_price} øre")
         else:
             print("Price isn't found")
     except Exception as error:
@@ -29,6 +29,13 @@ def price():
 
 
 price()
+
+
+
+
+
+
+
 
 
 
