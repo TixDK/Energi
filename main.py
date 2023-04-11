@@ -21,7 +21,9 @@ def price():
         
         if price is not None:
             data_price = price.text.strip()
-            print(f"Prisen er {data_price} øre")
+            data_price = float(data_price.replace(',', '.'))
+            converted_price = '{:.1f}'.format(data_price / 100)
+            print(f"Prisen er {converted_price} Kr")
         else:
             print("Price isn't found")
     except Exception as error:
@@ -29,6 +31,20 @@ def price():
 
 
 price()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
