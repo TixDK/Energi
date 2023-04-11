@@ -27,42 +27,10 @@ def price():
         else:
             print("Price isn't found")
     except Exception as error:
-        print(f"Fejl: {error}")
+        print(f"Error: {error}")
 
 
 if __name__ == "__main__":
     price()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
