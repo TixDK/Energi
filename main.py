@@ -2,7 +2,7 @@
 
 
 
-#Data collector 
+#Average price collector 
 
 import requests
 from bs4 import BeautifulSoup
@@ -23,14 +23,22 @@ def price():
             data_price = price.text.strip()
             data_price = float(data_price.replace(',', '.'))
             converted_price = '{:.1f}'.format(data_price / 100)
-            print(f"Prisen er {converted_price} Kr")
+            print(f"Average price last month is {converted_price} Danish Krones!")
         else:
             print("Price isn't found")
     except Exception as error:
         print(f"Fejl: {error}")
 
 
-price()
+if __name__ == "__main__":
+    price()
+
+
+
+
+
+
+
 
 
 
