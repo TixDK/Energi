@@ -6,6 +6,7 @@
 
 import requests
 from bs4 import BeautifulSoup
+import ui
 
 
 url = 'https://www.ok.dk/privat/produkter/el/priser'
@@ -28,9 +29,20 @@ def price():
             print("Price isn't found")
     except Exception as error:
         print(f"Error: {error}")
+    return converted_price
 
 
 if __name__ == "__main__":
-    price()
+    try:
+        ui.UI()
+    except Exception as err:
+        print(f"Error: {err}")
+
+
+
+
+
+
+
 
 
