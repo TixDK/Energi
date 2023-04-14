@@ -1,10 +1,5 @@
 import sqlite3
 
-
-
-
-
-
 class DataInsertion:
 
 
@@ -26,7 +21,6 @@ class DataInsertion:
         power INTEGER,
         total INTEGER
         )
-
         """)
 
 
@@ -60,7 +54,3 @@ class DataInsertion:
         self.database.commit()
 
         self.database.close()  
-
-
-
-
