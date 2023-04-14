@@ -1,6 +1,7 @@
 import main
 from tkinter import *
 import customtkinter as frame
+import db
 
 
 def UI():
@@ -19,7 +20,17 @@ def UI():
     nuværende_el_pris.configure(font=('Microsoft YaHei UI Light', 16))
     nuværende_el_pris.place(x=10, y= 10)
 
+
+    creation_data = db.DataInsertion()
+    
+
+    data_knap = frame.CTkButton(master=app, text="Create Database", command=creation_data.create_data())
+    data_knap.place(relx=0.8, rely= 0.92)
+
+    data_knap = frame.CTkCheckBox(master=app, text="Update Data")
+    data_knap.place(relx=0.8, rely= 0.85)     
+
+
     
     app.mainloop()
-
 
